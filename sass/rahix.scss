@@ -13,8 +13,8 @@ $cyan: #36cdc4;
 $primary: $purple;
 $text: $dark-purple;
 
-$title-color: $dark-purple;
-$subtitle-color: desaturate(lighten($dark-purple, 20.0), 50.0);
+$title-color: $rose;
+$subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
 
 @import "../bulma/bulma.sass";
 
@@ -22,7 +22,7 @@ $subtitle-color: desaturate(lighten($dark-purple, 20.0), 50.0);
 
 .rx-header h1 {
     font-family: monospace;
-    font-size: 400%;
+    font-size: 2em;
 }
 
 #wires {
