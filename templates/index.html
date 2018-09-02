@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <link rel="stylesheet" href="/rahix.css" />
+
+    <noscript>
+      <style>
+        .js-only {
+          display: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <div id="wires">
+      <span class="js-only">
+        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+          {% include "wires.html" %}
+        </svg>
+      </span>
+      <noscript>
+        Foo a bar please
+      </noscript>
+    </div>
+    <div class="rx-header hero section">
+      <h1 class="has-text-centered">{% block header %}{{ config.title }}{% endblock header %}</h1>
+    </div>
+
+    <div id="content-div" class="container section">
+      {% block content %}
+      <b>Empty</b>
+      {% endblock content %}
+    </div>
+
+    <script>
+      var group_els = document.querySelectorAll("#wires svg g")
+      var groups = [];
+
+      group_els.forEach(function(g) {
+        groups.push({
+          length: g.children[0].getTotalLength(),
+          path: g.children[0],
+          circle: g.children[2],
+        });
+      });
+
+      window.addEventListener("scroll", function (event) {
+        var t = Math.min(event.pageY * 8.0, 1000);
+
+        groups.forEach(function(g) {
+          g.path.style = "stroke-dashoffset: -" + (t / 1000 * g.length);
+          var pos = g.path.getPointAtLength((t / 1000) * g.length);
+          g.circle.cx.baseVal.value = pos.x;
+          g.circle.cy.baseVal.value = pos.y;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+// Variables
+
+$dark-purple: #1c0658;
+$purple: #5c2686;
+$rose: #ff1690;
+$yellow: #f4d676;
+$cyan: #36cdc4;
+
+// Bulma
+
+$primary: $purple;
+$text: $dark-purple;
+
+$title-color: $dark-purple;
+$subtitle-color: desaturate(lighten($dark-purple, 20.0), 50.0);
+
+@import "../bulma/bulma.sass";
+
+// Custom styles
+
+.rx-header h1 {
+    font-family: monospace;
+    font-size: 400%;
+}
+
+#wires {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    svg {
+        width: 100%;
+
+        g {
+            stroke: $rose;
+
+            .wire {
+                fill: transparent;
+                stroke-width: 4px;
+                stroke: inherit;
+                stroke-linejoin: round;
+            }
+
+            circle.wire {
+                fill: $white;
+            }
+
+            .anim {
+                stroke-dasharray: 100%;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        g:nth-child(4n+1) {
+            stroke: $cyan;
+        }
+
+        g:nth-child(4n+2) {
+            stroke: $purple;
+        }
+
+        g:nth-child(4n+3) {
+            stroke: $yellow;
+        }
+    }
+}
+
+// Markdown styling
+
+#content-div {
+
+    h1 {
+        @extend .title;
+        margin-top: 0px !important;
+    }
+
+    h2 {
+        @extend .subtitle;
+        margin-top: 0px !important;
+    }
+}
