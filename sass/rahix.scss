@@ -28,7 +28,7 @@ $subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
 #wires {
     position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: -1;
 
     svg {
         width: 100%;
@@ -78,6 +78,26 @@ $subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
 
     h2 {
         @extend .subtitle;
-        margin-top: 0px !important;
+        margin-top: 1em !important;
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    table {
+        @extend .table;
+        @extend .is-fullwidth;
+        @extend .is-striped;
+    }
+
+    blockquote {
+        @extend .box;
+        margin-top: 1.5rem;
+
+        p {
+            border-left: 0.25em solid darken($white, 25);
+            padding-left: 0.25em;
+        }
     }
 }
