@@ -36,12 +36,35 @@
 
     <div id="content-div" class="container section">
       {% block content %}
-      <b>Empty</b>
+      <section class="articles">
+        {% for page in section.pages %}
+          <div class="column is-10 is-offset-1">
+            <div class="card article">
+              <div class="card-content">
+                <a href="{{ page.permalink }}" class="rx-page-link">
+                  <div class="media">
+                    <div class="media-content has-text-centered">
+                      <p class="title article-title">{{ page.title }}</p>
+                      <div class="tags has-addons level-item">
+                        <span class="tag is-rounded is-info">@{{ config.extra.author }}</span>
+                        <span class="tag is-rounded">{{ page.date }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content article-body">
+                    {{ page.content | safe | truncate }}
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
       {% endblock content %}
     </div>
 
     <script>
-      var group_els = document.querySelectorAll("#wires svg g")
+      var group_els = document.querySelectorAll("#wires .js-only svg g")
       var groups = [];
 
       group_els.forEach(function(g) {

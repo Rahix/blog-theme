@@ -4,5 +4,7 @@
 {% block header %}{{ page.title }}{% endblock header %}
 
 {% block content %}
-{{ page.content | safe }}
+<div class="content">
+  {{ page.content | safe }}
+</div>
 {% endblock content %}

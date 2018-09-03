@@ -11,10 +11,13 @@ $cyan: #36cdc4;
 // Bulma
 
 $primary: $purple;
+$link: lighten($dark-purple, 10.0);
+$info: $purple;
 $text: $dark-purple;
 
 $title-color: $rose;
 $subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
+$content-heading-color: $rose;
 
 @import "../bulma/bulma.sass";
 
@@ -22,6 +25,7 @@ $subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
 
 .rx-header h1 {
     font-family: monospace;
+    font-weight: bold;
     font-size: 2em;
 }
 
@@ -67,37 +71,6 @@ $subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
     }
 }
 
-// Markdown styling
-
-#content-div {
-
-    h1 {
-        @extend .title;
-        margin-top: 0px !important;
-    }
-
-    h2 {
-        @extend .subtitle;
-        margin-top: 1em !important;
-    }
-
-    ul {
-        list-style: disc;
-    }
-
-    table {
-        @extend .table;
-        @extend .is-fullwidth;
-        @extend .is-striped;
-    }
-
-    blockquote {
-        @extend .box;
-        margin-top: 1.5rem;
-
-        p {
-            border-left: 0.25em solid darken($white, 25);
-            padding-left: 0.25em;
-        }
-    }
+#content-div .card a.rx-page-link {
+    color: $text;
 }

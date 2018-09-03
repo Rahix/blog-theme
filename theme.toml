@@ -1,0 +1,10 @@
+name = "rahix"
+description = "Theme for my personal blog"
+license = "GPL-3.0"
+
+[extra]
+author = "Rahix"
+
+[author]
+name = "Rahix"
+homepage = "https://blog.rahix.de"
