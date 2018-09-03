@@ -11,8 +11,10 @@ $cyan: #36cdc4;
 // Bulma
 
 $primary: $purple;
+$info: $cyan;
+$warning: $yellow;
+$danger: $rose;
 $link: lighten($dark-purple, 10.0);
-$info: $purple;
 $text: $dark-purple;
 
 $title-color: $rose;
@@ -71,6 +73,27 @@ $content-heading-color: $rose;
     }
 }
 
-#content-div .card a.rx-page-link {
-    color: $text;
+#content-div {
+    .card a.rx-page-link {
+        color: $text;
+    }
+
+    // Markdown style fixes
+    code {
+        background: transparentize($white, 0.8);
+        margin: 0;
+        padding: 0;
+        margin-left: 0.1em;
+        margin-right: 0.1em;
+        padding-left: 0.1em;
+        padding-right: 0.1em;
+        color: $rose;
+        border: 0.02em solid transparentize($black, 0.8);
+        border-radius: 0.3em;
+        font-size: inherit;
+    }
+
+    strong, b {
+        color: currentColor;
+    }
 }

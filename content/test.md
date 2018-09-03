@@ -3,7 +3,7 @@ title = "Test Post"
 date = 2018-09-03
 +++
 
-Et et exercitationem odio necessitatibus omnis. Dolorem architecto temporibus explicabo quia vel aut. Tenetur accusantium adipisci error. Dolorum optio veritatis odio.
+Et et `exercitationem` odio *necessitatibus* omnis. Dolorem **architecto** temporibus explicabo quia vel aut. Tenetur accusantium adipisci error. Dolorum optio veritatis odio.
 
 Necessitatibus quod minima quis qui eligendi fugit. Sint et natus quis odit perspiciatis sint. Quod neque et ut. Iusto et libero odio omnis voluptatum natus. Illum deserunt corrupti quia ducimus voluptatem et quia.
 
@@ -11,6 +11,10 @@ Enim dignissimos aspernatur dolor aperiam iure vero qui. Sapiente a in itaque is
 
 > Unde quibusdam nisi qui aperiam ea omnis. Libero facilis dolor perspiciatis. Qui ipsam non fugit eum explicabo voluptas rerum. Culpa est ut nobis quas distinctio est accusamus. Ab eos similique optio.
 > Autem adipisci officia sunt reprehenderit nihil. Occaecati minus veritatis quos consequatur voluptatibus enim aut. Molestias quasi ex deleniti. Odio et ipsum at distinctio autem numquam. Harum ipsam laboriosam blanditiis sit.
+
+{% note() %}
+A note with <code>monospace</code> **styling**.
+{% end %}
 
 ---
 
@@ -60,6 +64,14 @@ def main():
 5. Steps
 
 ---
+
+{% warning() %}
+**Warning:** Lorem ipsum dolor sit amet
+{% end %}
+
+{% danger() %}
+**Warning:** Lorem ipsum dolor sit amet
+{% end %}
 
 # Table
 
