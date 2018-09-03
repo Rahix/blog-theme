@@ -48,6 +48,18 @@ $footer-background-color: $yellow;
     svg {
         width: 100%;
 
+        .rx-link {
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 50px;
+            fill: $purple;
+        }
+
+        .rx-logo {
+            fill: $purple;
+            stroke: $purple;
+        }
+
         g.wire-group {
             stroke: $rose;
 
@@ -79,28 +91,18 @@ $footer-background-color: $yellow;
         g.wire-group:nth-child(4n+3) {
             stroke: $purple;
         }
-
-        .rx-link {
-            font-family: monospace;
-            font-weight: bold;
-            font-size: 50px;
-            fill: $purple;
-        }
-
-        .rx-logo {
-            fill: $purple;
-            stroke: $purple;
-        }
     }
 }
 
-.notification.is-warning {
-    color: inherit;
-}
-
-.notification.is-info, .notification.is-danger {
-    h1, h2, h3, h4, h5, h6 {
+.notification {
+    .is-warning {
         color: inherit;
+    }
+
+    .is-info, .notification.is-danger {
+        h1, h2, h3, h4, h5, h6 {
+            color: inherit;
+        }
     }
 }
 

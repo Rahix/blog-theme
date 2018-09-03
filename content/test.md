@@ -86,4 +86,4 @@ def main():
 
 # Image
 
-![rahix](/rahix.svg)
+![rahix](/img/rahix.svg)
