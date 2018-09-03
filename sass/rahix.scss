@@ -8,6 +8,14 @@ $rose: #ff1690;
 $yellow: #f4d676;
 $cyan: #36cdc4;
 
+// Font Awesome
+
+$fa-font-path: "/fontawesome";
+@import "../fontawesome/fontawesome.scss";
+@import "../fontawesome/regular.scss";
+@import "../fontawesome/solid.scss";
+@import "../fontawesome/brands.scss";
+
 // Bulma
 
 $primary: $purple;
@@ -90,8 +98,10 @@ $footer-background-color: $yellow;
     color: inherit;
 }
 
-footer.footer {
-    padding-bottom: 0;
+footer a.rx-icon-link {
+    color: $purple;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 #content-div {

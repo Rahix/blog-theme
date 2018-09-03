@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block title %}Page not found!{% endblock title %}
+{% block header %}404{% endblock header %}
+
+{% block content %}
+<div class="tile is-parent">
+  <div class="tile is-child notification is-danger">
+    <h1 class="title">The page you are trying to access does not exists :/</h1>
+    <a href="{{ config.base_url }}">
+      <h2 class="subtitle">-&gt; Back Home</h2>
+    </a>
+  </div>
+</div>
+{% endblock content %}

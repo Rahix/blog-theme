@@ -91,12 +91,38 @@
       {% endblock content %}
     </div>
     <footer class="footer">
-      <div class="container section">
+      <div class="container">
         <div class="content has-text-centered">
+          <a class="rx-icon-link" href="{{ config.base_url }}">
+            <div class="icon is-large">
+              <i class="fas fa-3x fa-home"></i>
+            </div>
+          </a>
+          {% if config.extra.author_github %}
+          <a class="rx-icon-link" href="{{ config.extra.author_github }}">
+            <div class="icon is-large">
+              <i class="fab fa-3x fa-github"></i>
+            </div>
+          </a>
+          {% endif %}
+          {% if config.extra.author_mail %}
+          <a class="rx-icon-link" href="mailto: {{ config.extra.author_mail }}">
+            <div class="icon is-large">
+              <i class="far fa-3x fa-envelope"></i>
+            </div>
+          </a>
+          {% endif %}
+          <a class="rx-icon-link" href="">
+            <div class="icon is-large">
+              <i class="fas fa-3x fa-palette"></i>
+            </div>
+          </a>
+          <hr />
           <p>
             <a href="{{ config.base_url }}">{{ config.base_url }}</a>, made using
             <a href="https://www.getgutenberg.io/">Gutenberg</a>,
-            <a href="https://bulma.io/">Bulma</a> and a color palette by
+            <a href="https://bulma.io/">Bulma</a>,
+            <a href="https://fontawesome.com/">Font Awesome</a>, and a color palette by
             <a href=https://www.colourlovers.com/palette/4588091/Outrun">Vitalynk</a>.
           </p>
           <p>
