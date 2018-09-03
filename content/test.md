@@ -81,3 +81,9 @@ def main():
 | --- | --- |
 | Hello | World |
 | Bar | Baz |
+
+---
+
+# Image
+
+![rahix](/rahix.svg)

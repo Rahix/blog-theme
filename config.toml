@@ -16,3 +16,4 @@ build_search_index = true
 
 [extra]
 author = "Rahix"
+author_mail = "rahix@rahix.de"

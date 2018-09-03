@@ -34,12 +34,11 @@ $content-heading-color: $rose;
 #wires {
     position: fixed;
     width: 100%;
-    z-index: -1;
 
     svg {
         width: 100%;
 
-        g {
+        g.wire-group {
             stroke: $rose;
 
             .wire {
@@ -59,16 +58,28 @@ $content-heading-color: $rose;
             }
         }
 
-        g:nth-child(4n+1) {
+        g.wire-group:nth-child(4n+1) {
             stroke: $cyan;
         }
 
-        g:nth-child(4n+2) {
+        g.wire-group:nth-child(4n+2) {
+            stroke: $yellow;
+        }
+
+        g.wire-group:nth-child(4n+3) {
             stroke: $purple;
         }
 
-        g:nth-child(4n+3) {
-            stroke: $yellow;
+        .rx-link {
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 50px;
+            fill: $purple;
+        }
+
+        .rx-logo {
+            fill: $purple;
+            stroke: $purple;
         }
     }
 }
