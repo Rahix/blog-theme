@@ -94,20 +94,21 @@ $footer-background-color: $yellow;
     }
 }
 
-.notification {
-    .is-warning {
-        color: inherit;
-    }
+.notification.is-warning {
+    color: inherit;
+}
 
-    .is-info, .notification.is-danger {
-        h1, h2, h3, h4, h5, h6 {
-            color: inherit;
-        }
+.notification.is-info, .notification.is-danger {
+    h1, h2, h3, h4, h5, h6 {
+        color: inherit;
     }
 }
 
-footer a.rx-icon-link {
+.icon i {
     color: $purple;
+}
+
+footer a.rx-icon-link {
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
