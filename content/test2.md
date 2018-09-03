@@ -41,7 +41,7 @@ Necessitatibus quod minima quis qui eligendi fugit. Sint et natus quis odit pers
 Necessitatibus quod minima quis qui eligendi fugit. Sint et natus quis odit perspiciatis sint. Quod neque et ut. Iusto et libero odio omnis voluptatum natus. Illum deserunt corrupti quia ducimus voluptatem et quia.
 {% end %}
 
-# Icon
+# Icons
 <div class="box has-text-centered">
     <div class="columns">
         <div class="column">

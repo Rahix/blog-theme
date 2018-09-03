@@ -124,7 +124,9 @@ footer a.rx-icon-link {
 }
 
 #content-div {
-    max-width: 90%;
+    @media screen and (min-width: 445px) and (max-width: 1080px) {
+        max-width: 90%;
+    }
 
     .card a.rx-page-link {
         color: $text;
