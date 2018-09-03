@@ -79,7 +79,7 @@
                     </div>
                   </div>
                   <div class="content article-body">
-                    {{ page.content | safe | truncate }}
+                    {{ page.content | safe | striptags | truncate }}
                   </div>
                 </a>
               </div>
@@ -89,6 +89,21 @@
       </section>
       {% endblock content %}
     </div>
+    <footer class="footer">
+      <div class="container section">
+        <div class="content has-text-centered">
+          <p>
+            <a href="{{ config.base_url }}">{{ config.base_url }}</a>, made using
+            <a href="https://www.getgutenberg.io/">Gutenberg</a>,
+            <a href="https://bulma.io/">Bulma</a> and a color palette by
+            <a href=https://www.colourlovers.com/palette/4588091/Outrun">Vitalynk</a>.
+          </p>
+          <p>
+            Gutenberg theme can be found on <a href="">GitHub</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <script>
       var group_els = document.querySelectorAll("#wires .js-only svg g.wire-group")

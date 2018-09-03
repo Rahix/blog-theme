@@ -14,12 +14,14 @@ $primary: $purple;
 $info: $cyan;
 $warning: $yellow;
 $danger: $rose;
-$link: lighten($dark-purple, 10.0);
+$link: mix($dark-purple, $rose, 25%);
+$link-hover: lighten(mix($dark-purple, $rose, 25%), 10.0);
 $text: $dark-purple;
 
 $title-color: $rose;
 $subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
 $content-heading-color: $rose;
+$footer-background-color: $yellow;
 
 @import "../bulma/bulma.sass";
 
@@ -63,7 +65,7 @@ $content-heading-color: $rose;
         }
 
         g.wire-group:nth-child(4n+2) {
-            stroke: $yellow;
+            stroke: $cyan;
         }
 
         g.wire-group:nth-child(4n+3) {
