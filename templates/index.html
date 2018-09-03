@@ -71,11 +71,12 @@
                 <a href="{{ page.permalink }}" class="rx-page-link">
                   <div class="media">
                     <div class="media-content has-text-centered">
-                      <p class="title article-title">{{ page.title }}</p>
-                      <div class="tags has-addons level-item">
-                        <span class="tag is-rounded is-info">@{{ config.extra.author }}</span>
-                        <span class="tag is-rounded">{{ page.date }}</span>
-                      </div>
+                      <p class="title article-title">{{ page.title }}
+                        <span class="tags has-addons level-item">
+                          <span class="tag is-rounded is-primary">{{ page.date }}</span>
+                          <span class="tag is-rounded has-text-grey">{{ page.reading_time }} min read</span>
+                        </span>
+                      </p>
                     </div>
                   </div>
                   <div class="content article-body">
