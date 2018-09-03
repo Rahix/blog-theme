@@ -19,6 +19,7 @@
   </head>
   <body>
     <div id="wires">
+      {% import "wires.html" as wires %}
       <span class="js-only">
         <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
           <a href="/">
@@ -34,7 +35,7 @@
             <text x=8 y=356 class="rx-link">@</text>
           </a>
           {% endif %}
-          {% include "wires.html" %}
+          {{ wires::js() }}
         </svg>
       </span>
       <noscript>
@@ -52,7 +53,7 @@
             <text x=8 y=356 class="rx-link">@</text>
           </a>
           {% endif %}
-          {% include "wires-noscript.html" %}
+          {{ wires::nojs() }}
         </svg>
       </noscript>
     </div>

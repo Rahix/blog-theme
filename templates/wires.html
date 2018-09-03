@@ -1,3 +1,4 @@
+{% macro js() %}
 <g class="wire-group">
     <path class="wire anim" d="M 600 50 L 800 50 L 850 100 L 900 100 L 950 150 L 950 200" />
     <path class="wire" d="M 1000 425 L 975 425 L 950 400 L 950 200" />
@@ -28,3 +29,31 @@
     <path class="wire" d="M 50 300 L 50 350 L 25 375 L 0 375" />
     <circle cx="50" cy="150" r="6" class="wire"/>
 </g>
+{% endmacro js %}
+
+{% macro nojs() %}
+<g class="wire-group">
+    <path class="wire" d="M 1000 425 L 975 425 L 950 400 L 950 200" />
+    <circle cx="950" cy="200" r="6" class="wire"/>
+</g>
+<g class="wire-group">
+    <path class="wire" d="M 50 150 L 25 175 L 0 175" />
+    <circle cx="50" cy="150" r="6" class="wire"/>
+</g>
+<g class="wire-group">
+    <path class="wire" d="M 50 50 L 0 50" />
+    <circle cx="50" cy="50" r="6" class="wire"/>
+</g>
+<g class="wire-group">
+    <path class="wire" d="M 975 200 L 975 250 L 990 265 L 1000 265" />
+    <circle cx="975" cy="200" r="6" class="wire"/>
+</g>
+<g class="wire-group">
+    <path class="wire" d="M 975 75 L 1000 75" />
+    <circle cx="975" cy="75" r="6" class="wire"/>
+</g>
+<g class="wire-group">
+    <path class="wire" d="M 50 300 L 50 350 L 25 375 L 0 375" />
+    <circle cx="50" cy="300" r="6" class="wire"/>
+</g>
+{% endmacro nojs %}
