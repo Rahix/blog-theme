@@ -45,6 +45,10 @@ $footer-background-color: $yellow;
     position: fixed;
     width: 100%;
 
+    @include mobile {
+        position: absolute;
+    }
+
     svg {
         width: 100%;
 
@@ -58,10 +62,16 @@ $footer-background-color: $yellow;
         .rx-logo {
             fill: $purple;
             stroke: $purple;
+
+            @include mobile {
+                transform: scale(3.0);
+                fill: transparentize($purple, 0.5);
+                stroke: transparentize($purple, 0.5);
+            }
         }
 
         g.wire-group {
-            stroke: $rose;
+            stroke: $cyan;
 
             .wire {
                 fill: transparent;
@@ -85,11 +95,11 @@ $footer-background-color: $yellow;
         }
 
         g.wire-group:nth-child(4n+2) {
-            stroke: $cyan;
+            stroke: $purple;
         }
 
         g.wire-group:nth-child(4n+3) {
-            stroke: $purple;
+            stroke: $rose;
         }
     }
 }
