@@ -118,6 +118,10 @@
       });
 
       window.addEventListener("scroll", function (event) {
+        animate(event);
+      });
+
+      function animate(event) {
         var t = Math.min(event.pageY * 8.0, 1000);
 
         groups.forEach(function(g) {
@@ -126,7 +130,9 @@
           g.circle.cx.baseVal.value = pos.x;
           g.circle.cy.baseVal.value = pos.y;
         });
-      });
+      }
+
+      animate({pageY: window.scrollY});
     </script>
   </body>
 </html>

@@ -90,6 +90,10 @@ $footer-background-color: $yellow;
     color: inherit;
 }
 
+footer.footer {
+    padding-bottom: 0;
+}
+
 #content-div {
     .card a.rx-page-link {
         color: $text;
