@@ -29,7 +29,7 @@ $text: $dark-purple;
 $title-color: $rose;
 $subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
 $content-heading-color: $rose;
-$footer-background-color: $yellow;
+$footer-background-color: #ddd;
 
 @import "../bulma/bulma.sass";
 

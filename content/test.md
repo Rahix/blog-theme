@@ -14,9 +14,9 @@ Enim dignissimos aspernatur dolor aperiam iure vero qui. Sapiente a in itaque is
 > Unde quibusdam nisi qui aperiam ea omnis. Libero facilis dolor perspiciatis. Qui ipsam non fugit eum explicabo voluptas rerum. Culpa est ut nobis quas distinctio est accusamus. Ab eos similique optio.
 > Autem adipisci officia sunt reprehenderit nihil. Occaecati minus veritatis quos consequatur voluptatibus enim aut. Molestias quasi ex deleniti. Odio et ipsum at distinctio autem numquam. Harum ipsam laboriosam blanditiis sit.
 
-{% note() %}
+{{ tile_note() }}
 A note with <code>monospace</code> **styling**.
-{% end %}
+{{ tile_end() }}
 
 ---
 
@@ -67,13 +67,15 @@ def main():
 
 ---
 
-{% warning() %}
-**Warning:** Lorem ipsum dolor sit amet
-{% end %}
+{{ tile_warning() }}
 
-{% danger() %}
 **Warning:** Lorem ipsum dolor sit amet
-{% end %}
+{{ tile_end() }}
+
+{{ tile_danger() }}
+
+**Warning:** Lorem ipsum dolor sit amet
+{{ tile_end() }}
 
 # Table
 
