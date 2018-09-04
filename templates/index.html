@@ -135,6 +135,7 @@
 
       group_els.forEach(function(g) {
         groups.push({
+          duration: g.getAttribute("data-wire-duration"),
           length: g.children[0].getTotalLength(),
           path: g.children[0],
           circle: g.children[2],
@@ -146,9 +147,10 @@
       });
 
       function animate() {
-        var t = Math.min(window.scrollY * 8.0, 1000);
 
         groups.forEach(function(g) {
+          var t = Math.min(window.scrollY * 1000 / g.duration, 1000);
+
           g.path.style = "stroke-dashoffset: -" + (t / 1000 * g.length);
           var pos = g.path.getPointAtLength((t / 1000) * g.length);
           g.circle.cx.baseVal.value = pos.x;

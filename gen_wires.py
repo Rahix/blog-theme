@@ -22,7 +22,7 @@ def main() -> None:
         first = w["path_a"][0]
         points_anim = " L ".join(f"{x} {y}" for x, y in w["path_a"])
         points_static = " L ".join(f"{x} {y}" for x, y in w["path_b"])
-        print(f'<g class="wire-group wire-color-{w["color"]}">')
+        print(f'<g class="wire-group wire-color-{w["color"]}" data-wire-duration="{w["duration"]}">')
         print(f'    <path class="wire anim" d="M {points_anim}" />')
         print(f'    <path class="wire" d="M {points_static}" />')
         print(f'    <circle cx="{first[0]}" cy="{first[1]}" r="{radius}" class="wire" />')
