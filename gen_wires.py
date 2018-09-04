@@ -1,3 +1,4 @@
+import sys
 import json
 
 def style(width: float) -> None:
@@ -10,7 +11,10 @@ def style(width: float) -> None:
     print(f'</defs>')
 
 def main() -> None:
-    with open("wires.json") as f:
+    if len(sys.argv) != 2:
+        raise Exception("usage: py gen_wires.py <wires.json>")
+
+    with open(sys.argv[1]) as f:
         data = json.load(f)
 
     width = data["width"]
