@@ -41,9 +41,8 @@ $footer-background-color: #ddd;
     font-size: 2em;
 }
 
-#wires {
+.rx-header-links {
     position: fixed;
-    width: 100%;
 
     @include mobile {
         position: absolute;
@@ -57,6 +56,10 @@ $footer-background-color: #ddd;
             font-weight: bold;
             font-size: 50px;
             fill: $purple;
+
+            @include mobile {
+                fill: transparent;
+            };
         }
 
         .rx-logo {
@@ -65,10 +68,35 @@ $footer-background-color: #ddd;
 
             @include mobile {
                 transform: scale(3.0);
-                fill: transparentize($purple, 0.5);
-                stroke: transparentize($purple, 0.5);
+                fill: transparentize($purple, 0.1);
+                stroke: transparent;
             }
         }
+    }
+}
+
+.rx-wires {
+
+    &.rx-narrow {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &.rx-wide {
+        display: block;
+
+        @include mobile {
+            display: none;
+        }
+    }
+    position: fixed;
+    width: 100%;
+
+    svg {
+        width: 100%;
 
         g.wire-color-cyan {
             stroke: $cyan;
