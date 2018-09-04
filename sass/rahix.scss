@@ -70,9 +70,19 @@ $footer-background-color: #ddd;
             }
         }
 
-        g.wire-group {
+        g.wire-color-cyan {
             stroke: $cyan;
+        }
 
+        g.wire-color-purple {
+            stroke: $purple;
+        }
+
+        g.wire-color-rose {
+            stroke: $rose;
+        }
+
+        g.wire-group {
             .wire {
                 fill: transparent;
                 stroke-width: 4px;
@@ -88,18 +98,6 @@ $footer-background-color: #ddd;
                 stroke-dasharray: 100%;
                 stroke-dashoffset: 0;
             }
-        }
-
-        g.wire-group:nth-child(4n+1) {
-            stroke: $cyan;
-        }
-
-        g.wire-group:nth-child(4n+2) {
-            stroke: $purple;
-        }
-
-        g.wire-group:nth-child(4n+3) {
-            stroke: $rose;
         }
     }
 }
