@@ -89,4 +89,13 @@ def main():
 
 # Image
 
-![rahix](/img/rahix.svg)
+![rahix](../img/rahix.svg)
+
+---
+
+# Long Table
+
+| Feature     | Mutex                                                                                               | Manager                         |
+|-------------|-----------------------------------------------------------------------------------------------------|---------------------------------|
+| **std**     | [`std::sync::Mutex`](https://doc.rust-lang.org/nightly/std/sync/struct.Mutex.html)                  | `shared_bus::StdBusManager`     |
+| **cortexm** | [`cortex_m::interrupt::Mutex`](https://docs.rs/cortex-m/0.5.6/cortex_m/interrupt/struct.Mutex.html) | `shared_bus::CortexMBusManager` |
