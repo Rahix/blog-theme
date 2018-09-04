@@ -82,7 +82,11 @@
                     </div>
                   </div>
                   <div class="content article-body">
-                    {{ page.content | safe | striptags | truncate }}
+                    {% if page.summary %}
+                      {{ page.summary | safe }}
+                    {% else %}
+                      {{ page.content | safe | striptags | truncate }}
+                    {% endif %}
                   </div>
               </div>
             </div>
