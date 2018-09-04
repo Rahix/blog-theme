@@ -15,7 +15,8 @@ Enim dignissimos aspernatur dolor aperiam iure vero qui. Sapiente a in itaque is
 > Autem adipisci officia sunt reprehenderit nihil. Occaecati minus veritatis quos consequatur voluptatibus enim aut. Molestias quasi ex deleniti. Odio et ipsum at distinctio autem numquam. Harum ipsam laboriosam blanditiis sit.
 
 {{ tile_note() }}
-A note with <code>monospace</code> **styling**.
+
+A *note* with `monospace` **styling**.
 {{ tile_end() }}
 
 ---

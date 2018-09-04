@@ -22,11 +22,6 @@
       {% import "wires.html" as wires %}
       <span class="js-only">
         <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-          {% if config.extra.author_mail %}
-          <a href="mailto: {{ config.extra.author_mail }}">
-            <text x=8 y=356 class="rx-link">@</text>
-          </a>
-          {% endif %}
           {{ wires::js() }}
           <a href="{{ config.base_url }}">
             <g class="rx-logo" transform="scale(0.8)">
@@ -36,15 +31,15 @@
             </g>
             <text x=8 y=160 class="rx-link">/</text>
           </a>
-        </svg>
-      </span>
-      <noscript>
-        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
           {% if config.extra.author_mail %}
           <a href="mailto: {{ config.extra.author_mail }}">
             <text x=8 y=356 class="rx-link">@</text>
           </a>
           {% endif %}
+        </svg>
+      </span>
+      <noscript>
+        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
           {{ wires::nojs() }}
           <a href="{{ config.base_url }}">
             <g class="rx-logo" transform="scale(0.8)">
@@ -54,6 +49,11 @@
             </g>
             <text x=8 y=160 class="rx-link">/</text>
           </a>
+          {% if config.extra.author_mail %}
+          <a href="mailto: {{ config.extra.author_mail }}">
+            <text x=8 y=356 class="rx-link">@</text>
+          </a>
+          {% endif %}
         </svg>
       </noscript>
     </div>
@@ -68,20 +68,18 @@
           <div class="column is-10 is-offset-1">
             <div class="card article">
               <div class="card-content">
-                <a href="{{ page.permalink }}" class="rx-page-link">
                   <div class="media">
                     <div class="media-content has-text-centered">
-                      <p class="title article-title">{{ page.title }}</p>
-                      <b class="tags has-addons level-item">
+                      <a href="{{ page.permalink }}" class="title article-title">{{ page.title }}</a>
+                      <div class="tags has-addons level-item" style="margin-top: 1em; font-weight: bold;">
                         <span class="tag is-rounded is-primary">{{ page.date }}</span>
                         <span class="tag is-rounded has-text-grey">{{ page.reading_time }} min read</span>
-                      </b>
+                      </div>
                     </div>
                   </div>
                   <div class="content article-body">
                     {{ page.content | safe | striptags | truncate }}
                   </div>
-                </a>
               </div>
             </div>
           </div>
