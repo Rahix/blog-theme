@@ -144,12 +144,12 @@
         });
       });
 
-      window.addEventListener("scroll", function (event) {
-        animate(event);
+      window.addEventListener("scroll", function () {
+        animate();
       });
 
-      function animate(event) {
-        var t = Math.min(event.pageY * 8.0, 1000);
+      function animate() {
+        var t = Math.min(window.scrollY * 8.0, 1000);
 
         groups.forEach(function(g) {
           g.path.style = "stroke-dashoffset: -" + (t / 1000 * g.length);
@@ -159,7 +159,7 @@
         });
       }
 
-      animate({pageY: window.scrollY});
+      animate();
     </script>
   </body>
 </html>
