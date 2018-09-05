@@ -176,4 +176,10 @@ footer a.rx-icon-link {
     strong, b {
         color: currentColor;
     }
+
+    img {
+        @extend .box;
+        max-width: 100%;
+        margin: auto;
+    }
 }
