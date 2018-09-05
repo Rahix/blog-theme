@@ -66,32 +66,21 @@
     </div>
 
     <div id="content-div" class="container section">
+      {% import "page-card.html" as page_card %}
+      {% import "nav.html" as nav %}
       {% block content %}
       <section class="articles">
-        {% for page in section.pages %}
-          <div class="column is-10 is-offset-1">
-            <div class="card article">
-              <div class="card-content">
-                  <div class="media">
-                    <div class="media-content has-text-centered">
-                      <a href="{{ page.permalink }}" class="title article-title">{{ page.title }}</a>
-                      <div class="tags has-addons level-item" style="margin-top: 1em; font-weight: bold;">
-                        <span class="tag is-rounded is-primary">{{ page.date }}</span>
-                        <span class="tag is-rounded has-text-grey">{{ page.reading_time }} min read</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="content article-body">
-                    {% if page.summary %}
-                      {{ page.summary | safe }}
-                    {% else %}
-                      {{ page.content | safe | striptags | truncate }}
-                    {% endif %}
-                  </div>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
+        {% if paginator %}
+          {{ nav::pagination(paginator=paginator) }}
+          {% for page in paginator.pages %}
+            {{ page_card::card(page=page) }}
+          {% endfor %}
+          {{ nav::pagination(paginator=paginator) }}
+        {% else %}
+          {% for page in section.pages %}
+            {{ page_card::card(page=page) }}
+          {% endfor %}
+        {% endif %}
       </section>
       {% endblock content %}
     </div>

@@ -23,13 +23,17 @@ $info: $cyan;
 $warning: $yellow;
 $danger: $rose;
 $link: mix($dark-purple, $rose, 25%);
-$link-hover: lighten(mix($dark-purple, $rose, 25%), 10.0);
 $text: $dark-purple;
 
-$title-color: $rose;
-$subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
 $content-heading-color: $rose;
 $footer-background-color: #ddd;
+$link-focus-border: $purple;
+$link-hover: lighten(mix($dark-purple, $rose, 25%), 10.0);
+$pagination-color: $dark-purple;
+$pagination-current-background-color: $purple;
+$pagination-current-border-color: lighten($purple, 10.0);
+$subtitle-color: desaturate(lighten($rose, 10.0), 20.0);
+$title-color: $rose;
 
 @import "../bulma/bulma.sass";
 

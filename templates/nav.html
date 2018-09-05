@@ -1,0 +1,37 @@
+{% macro pagination(paginator) %}
+{% if paginator.pagers | length > 1 %}
+<div class="column is-10 is-offset-1">
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <a class="pagination-previous"
+      {% if paginator.previous %}
+        href="{{ paginator.previous }}"
+      {% else %}
+        disabled
+      {% endif %}
+    >
+      <i class="fas fa-chevron-left"></i>
+    </a>
+    <a class="pagination-next"
+      {% if paginator.next %}
+        href="{{ paginator.next }}"
+      {% else %}
+        disabled
+      {% endif %}
+    >
+      <i class="fas fa-chevron-right"></i>
+    </a>
+    <ul class="pagination-list">
+      <li><a class="pagination-link" aria-label="Goto first page" href="{{ paginator.first }}">1</a></li>
+      <li><span class="pagination-ellipsis">&hellip;</span></li>
+      <li>
+        <a class="pagination-link is-current" aria-label="Page {{ paginator.current_index }}" aria-current="page">
+          {{ paginator.current_index }}
+        </a>
+      </li>
+      <li><span class="pagination-ellipsis">&hellip;</span></li>
+      <li><a class="pagination-link" aria-label="Goto last page" href="{{ paginator.last }}">{{ paginator.pagers | length }}</a></li>
+    </ul>
+  </nav>
+</div>
+{% endif %}
+{% endmacro pagination %}
