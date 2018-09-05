@@ -1,15 +1,18 @@
 {% extends "index.html" %}
 
 {% block title %}Page not found!{% endblock title %}
-{% block header %}404{% endblock header %}
+{% block header %}
+  <div class="rx-header hero section">
+    <a class="title has-text-centered" style="font-size: 300%" href="{{ config.base_url }}">{{ config.title }}</a>
+  </div>
+{% endblock header %}
 
 {% block content %}
-<div class="tile is-parent">
-  <div class="tile is-child notification is-danger">
-    <h1 class="title">The page you are trying to access does not exists :/</h1>
-    <a href="{{ config.base_url }}">
-      <h2 class="subtitle">-&gt; Back Home</h2>
-    </a>
+<div class="tile notification is-danger">
+  <div class="content">
+    <h1 class="title">404</h1>
+    <h2 class="subtitle">The page you are trying to access does not exists :/</h2>
+    <a href="{{ config.base_url }}">-&gt; Back Home</a>
   </div>
 </div>
 {% endblock content %}

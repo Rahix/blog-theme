@@ -44,10 +44,18 @@ body {
     overflow: hidden;
 }
 
-.rx-header h1 {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 2em;
+.rx-header {
+    * {
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 2em;
+        color: inherit;
+        z-index: 99;
+    }
+
+    a:hover {
+        color: $purple;
+    }
 }
 
 .rx-header-links {
@@ -139,12 +147,22 @@ body {
     }
 }
 
-.rx-post-card {
+.rx-image {
     background-repeat: no-repeat;
     background-size: 100%;
     opacity: 1.0;
     z-index: 0;
-    border-radius: 0.3em;
+
+    &.card {
+        border-radius: 0.3em;
+    }
+
+    &.rx-abs {
+        position: absolute;
+        height: 15em;
+        width: 100%;
+        z-index: -1;
+    }
 
     &::before {
         content: "";
