@@ -73,12 +73,12 @@
         {% if paginator %}
           {{ nav::pagination(paginator=paginator) }}
           {% for page in paginator.pages %}
-            {{ page_card::card(page=page) }}
+            {{ page_card::card(cfg=config, page=page) }}
           {% endfor %}
           {{ nav::pagination(paginator=paginator) }}
         {% else %}
           {% for page in section.pages %}
-            {{ page_card::card(page=page) }}
+            {{ page_card::card(cfg=config, page=page) }}
           {% endfor %}
         {% endif %}
       </section>
