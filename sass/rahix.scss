@@ -51,6 +51,15 @@ body {
         font-size: 2em;
         color: inherit;
         z-index: 99;
+        margin: auto;
+
+        &.rx-has-image {
+            $bg-color: transparentize($white, 0.7);
+
+            padding: 0;
+            background: $bg-color;
+            box-shadow: 0 0 0.3em 0.3em $bg-color;
+        }
     }
 
     a:hover {
