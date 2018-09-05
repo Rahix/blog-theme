@@ -39,6 +39,11 @@ $title-color: $rose;
 
 // Custom styles
 
+body {
+    // Fix if the page if malformed
+    overflow: auto;
+}
+
 .rx-header h1 {
     font-family: monospace;
     font-weight: bold;
