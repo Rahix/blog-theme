@@ -56,7 +56,6 @@ body {
         &.rx-has-image {
             $bg-color: transparentize($white, 0.7);
 
-            padding: 0;
             background: $bg-color;
             box-shadow: 0 0 0.3em 0.3em $bg-color;
         }
@@ -240,7 +239,7 @@ footer a.rx-icon-link {
         color: currentColor;
     }
 
-    img:not(.rx-post-background) {
+    &> img:not(.rx-post-background), *:not(.image) img:not(.rx-post-background) {
         @extend .box;
         max-width: 100%;
         margin: 1em auto;
