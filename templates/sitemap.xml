@@ -1,0 +1,24 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for page in pages %}
+      {% if not page.permalink is containing("drafts") %}
+        <url>
+            <loc>{{ page.permalink | safe }}</loc>
+            {% if page.date %}
+                <lastmod>{{ page.date }}</lastmod>
+            {% endif %}
+        </url>
+      {% endif %}
+    {% endfor %}
+    {% for section in sections %}
+        <url>
+            <loc>{{ section.permalink | safe }}</loc>
+        </url>
+    {% endfor %}
+    {% for taxonomy in taxonomies %}
+        {% for entry in taxonomy %}
+        <url>
+            <loc>{{ entry.permalink | safe }}</loc>
+        </url>
+        {% endfor %}
+    {% endfor %}
+</urlset>
