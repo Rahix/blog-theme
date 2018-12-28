@@ -1,5 +1,5 @@
 {% macro pagination(paginator) %}
-{% if paginator.pagers | length > 1 %}
+{% if paginator.number_pagers > 1 %}
 <div class="column is-10 is-offset-1">
   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
     <a class="pagination-previous"
@@ -29,7 +29,7 @@
         </a>
       </li>
       <li><span class="pagination-ellipsis">&hellip;</span></li>
-      <li><a class="pagination-link" aria-label="Goto last page" href="{{ paginator.last }}">{{ paginator.pagers | length }}</a></li>
+      <li><a class="pagination-link" aria-label="Goto last page" href="{{ paginator.last }}">{{ paginator.number_pagers }}</a></li>
     </ul>
   </nav>
 </div>
