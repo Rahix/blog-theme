@@ -1,3 +1,7 @@
+{% import "wires-wide.html" as wires_wide %}
+{% import "wires-narrow.html" as wires_narrow %}
+{% import "page-card.html" as page_card %}
+{% import "nav.html" as nav %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,7 +23,6 @@
   </head>
   <body>
     <div class="rx-wires rx-wide">
-      {% import "wires-wide.html" as wires_wide %}
       <span class="js-only">
         <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
           {{ wires_wide::js() }}
@@ -32,7 +35,6 @@
       </noscript>
     </div>
     <div class="rx-wires rx-narrow">
-      {% import "wires-narrow.html" as wires_narrow %}
       <span class="js-only">
         <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
           {{ wires_narrow::js() }}
@@ -68,8 +70,6 @@
     {% endblock header %}
 
     <div id="content-div" class="container section">
-      {% import "page-card.html" as page_card %}
-      {% import "nav.html" as nav %}
       {% block content %}
       <section class="articles">
         {% if paginator %}
