@@ -222,17 +222,40 @@ footer a.rx-icon-link {
 
     // Markdown style fixes
     code {
-        background: transparentize($white, 0.5);
+        background: transparentize(#c6c6c6, 0.6);
         margin: 0;
         padding: 0;
-        margin-left: 0.1em;
-        margin-right: 0.1em;
-        padding-left: 0.1em;
-        padding-right: 0.1em;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
         color: desaturate($rose, 20);
-        border: 0.02em solid transparentize($black, 0.7);
         border-radius: 0.1em;
         font-size: inherit;
+    }
+
+    pre code {
+        background: transparent;
+        color: currentColor;
+        margin: 0;
+        padding: 0;
+    }
+
+    p a > code::after {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+
+        color: darken($cyan, 10);
+
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f0c1";
+
+        vertical-align: top;
+        font-size: 70%;
+        margin-left: .2em;
+        margin-top: .2em;
     }
 
     strong, b {
