@@ -45,6 +45,8 @@ body {
 }
 
 .rx-header {
+    padding-bottom: 0;
+
     * {
         font-family: monospace;
         font-weight: bold;
@@ -78,9 +80,9 @@ body {
         width: 100%;
 
         .rx-link {
-            font-family: monospace;
+            font-family: "Font Awesome 5 Free";
             font-weight: bold;
-            font-size: 50px;
+            font-size: 30px;
             fill: $purple;
 
             @include mobile {
