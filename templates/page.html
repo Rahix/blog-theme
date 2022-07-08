@@ -8,8 +8,16 @@
   {% endif %}
   <div class="rx-header hero section">
     <h1 class="title has-text-centered rx-has-image">{{ page.title }}</h1>
-    <div class="tags has-addons level-item" style="margin-top: 1em; font-weight: bold;">
+    <div class="tags level-item" style="margin-top: 1em; font-weight: bold;">
       <span class="tag is-rounded is-primary">{{ page.date }}</span>
+      {% if page.taxonomies.tags %}
+        {% for tag in page.taxonomies.tags %}
+          <a class="tag is-rounded is-info" href="{{ config.base_url }}/tags/{{ tag }}">
+            {{ tag }}
+          </a>
+        {% endfor %}
+      {% endif %}
+      <span class="tag is-rounded has-text-grey">{{ page.reading_time }} min read</span>
     </div>
   </div>
 {% endblock header %}

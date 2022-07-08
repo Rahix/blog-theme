@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block title %}{{ config.title }} - {{ term.name }}{% endblock title %}
+
+{% block header %}
+  <div class="rx-header hero section">
+    <a class="title has-text-centered" style="font-size: 300%" href="{{ config.base_url }}">{{ config.title }}</a>
+    <span class="title has-text-centered" style="font-size: 200%" >{{ term.name }} posts</span>
+  </div>
+{% endblock header %}
+
+{% block content %}
+<section class="articles">
+  {% if paginator %}
+    {{ nav::pagination(paginator=paginator) }}
+    {% for page in paginator.pages %}
+      {{ page_card::card(cfg=config, page=page) }}
+    {% endfor %}
+    {{ nav::pagination(paginator=paginator) }}
+  {% elif taxonomy.name == "tags" and config.extra.reversed_tags is containing(term.name) %}
+    {% for page in term.pages | reverse %}
+      {{ page_card::card(cfg=config, page=page) }}
+    {% endfor %}
+  {% else %}
+    {% for page in term.pages %}
+      {{ page_card::card(cfg=config, page=page) }}
+    {% endfor %}
+  {% endif %}
+</section>
+{% endblock content %}
