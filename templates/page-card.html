@@ -8,7 +8,7 @@
     <div class="card-content">
       <div class="media">
         <div class="media-content has-text-centered">
-          <a href="{{ page.permalink }}" class="title article-title">{{ page.title }}</a>
+          <a href="{{ page.permalink }}" class="title article-title">{{ page.title }}{% if page.draft %} [DRAFT]{% endif %}</a>
           <div class="tags level-item" style="margin-top: 1em; font-weight: bold;">
             <span class="tag is-rounded is-primary">{{ page.date }}</span>
             {% if page.taxonomies.tags %}
