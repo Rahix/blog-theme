@@ -264,7 +264,7 @@ footer a.rx-icon-link {
         color: currentColor;
     }
 
-    &> img:not(.rx-post-background), *:not(.image) img:not(.rx-post-background) {
+    &> img:not(.rx-post-background), *:not(.image) img:not(.rx-post-background):not(.no-borders) {
         @extend .box;
         max-width: 100%;
         margin: 1em auto;
