@@ -157,6 +157,15 @@ body {
     }
 }
 
+@media print {
+    .rx-wires * {
+        display: none;
+    }
+    .rx-header-links {
+        display: none;
+    }
+}
+
 .rx-image {
     background-repeat: no-repeat;
     background-size: 100%;
