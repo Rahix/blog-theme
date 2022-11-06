@@ -269,6 +269,25 @@ footer a.rx-icon-link {
         margin-top: .2em;
     }
 
+    a.heading-anchor {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+
+        // color: darken($cyan, 10);
+        color: #c6c6c6;
+
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+
+        vertical-align: top;
+        font-size: 80%;
+        margin-left: .2em;
+        margin-top: .2em;
+    }
+
     strong, b {
         color: currentColor;
     }
