@@ -21,6 +21,10 @@
     {% for page in term.pages | reverse %}
       {{ page_card::card(cfg=config, page=page) }}
     {% endfor %}
+  {% elif taxonomy.name == "tags" and config.extra.custom_order_tags is containing(term.name) %}
+    {% for page in term.pages | sort(attribute="extra.custom_order") %}
+      {{ page_card::card(cfg=config, page=page) }}
+    {% endfor %}
   {% else %}
     {% for page in term.pages %}
       {{ page_card::card(cfg=config, page=page) }}
