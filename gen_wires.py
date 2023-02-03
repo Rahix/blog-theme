@@ -7,6 +7,7 @@ def style(pre: str, width: float) -> None:
     print(f'    <style>')
     print(f'        g.wire-group.p{pre} .wire {{')
     print(f'            stroke-width: {width}px;')
+    print(f'            fill: transparent;')
     print(f'        }}')
     print(f'    </style>')
     print(f'</defs>')
