@@ -1,0 +1,11 @@
+{# This <span> is needed to make the 'break-inside: avoid' work. #}
+{% if not embedded %}<span class="rx-avoid-break">{% endif %}
+  <div class="column {{ size | default(value="is-8 is-full-mobile") }} box rx-image-card">
+    <img alt="{{ alt }}" src="{{ src | default(value="") }}" />
+    {% if body %}
+    <p class="rx-caption">
+      {{ body | markdown(inline=true) | safe }}
+    </p>
+    {% endif %}
+  </div>
+{% if not embedded %}</span>{% endif %}
