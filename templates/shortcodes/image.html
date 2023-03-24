@@ -3,9 +3,9 @@
   <div class="column {{ size | default(value="is-8 is-full-mobile") }} box rx-image-card">
     <img alt="{{ alt }}" src="{{ src | default(value="") }}" />
     {% if body %}
-    <p class="rx-caption">
-      {{ body | markdown(inline=true) | safe }}
-    </p>
+    <div class="rx-caption">
+      <p>{{ body | markdown(inline=true) | safe }}</p>
+    </div>
     {% endif %}
   </div>
 {% if not embedded %}</span>{% endif %}
