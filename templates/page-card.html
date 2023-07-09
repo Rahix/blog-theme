@@ -29,6 +29,9 @@
           {% else %}
             {{ page.content | safe | striptags | truncate }}
           {% endif %}
+          <p>
+            <small><a href="{{ page.permalink }}">Read more...</a></small>
+          </p>
         </div>
       </div>
     </div>
