@@ -25,6 +25,9 @@ $danger: $rose;
 $link: mix($dark-purple, $rose, 25%);
 $text: $dark-purple;
 
+$family-sans-serif: "Fira Sans", "Roboto", BlinkMacSystemFont, -apple-system, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-monospace: "Fira Mono", "Roboto Mono", "Ubuntu Mono", monospace;
+
 $content-heading-color: $rose;
 $footer-background-color: #ddd;
 $link-focus-border: $purple;
@@ -48,7 +51,7 @@ body {
     padding-bottom: 0;
 
     * {
-        font-family: monospace;
+        font-family: $family-monospace;
         font-weight: bold;
         font-size: 2em;
         color: inherit;
