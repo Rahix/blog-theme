@@ -1,6 +1,29 @@
 {% extends "index.html" %}
 
-{% block title %}{{ page.title }}{% if page.draft %} [DRAFT]{% endif %}{% endblock title %}
+{% block title %}{{ page.title }}{% if page.draft %} [DRAFT]{% endif %} - {{ config.title }}{% endblock title %}
+
+{% block social %}
+<meta property="og:url" content="{{ page.permalink }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title }}{% if page.draft %} [DRAFT]{% endif %} - {{ config.title }}">
+
+<meta name="twitter:card" content="summary_large_image">
+{% if config.extra.social.domain %}<meta property="twitter:domain" content="{{ config.extra.social.domain }}">{% endif %}
+<meta property="twitter:url" content="{{ page.permalink }}">
+<meta name="twitter:title" content="{{ page.title }}{% if page.draft %} [DRAFT]{% endif %} - {{ config.title }}">
+
+{% if page.extra.social.description %}
+<meta name="description" content="{{ page.extra.social.description }}" />
+<meta property="og:description" content="{{ page.extra.social.description }}">
+<meta name="twitter:description" content="{{ page.extra.social.description }}">
+{% endif %}
+
+{% if page.extra.social.image %}
+{% set social_image = resize_image(path=page.extra.social.image, width=1200, height=630, op="fit") %}
+<meta property="og:image" content="{{ social_image.url }}">
+<meta name="twitter:image" content="{{ social_image.url }}">
+{% endif %}
+{% endblock social %}
 
 {% block header %}
   {% if page.extra.background %}

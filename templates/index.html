@@ -11,6 +11,28 @@
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
+    {% block social %}
+    {% if config.extra.social %}
+    <meta name="description" content="{{ config.extra.social.description }}" />
+
+    <meta property="og:url" content="{{ config.base_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ config.title }}">
+    <meta property="og:description" content="{{ config.extra.social.description }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="{{ config.extra.social.domain }}">
+    <meta property="twitter:url" content="{{ config.base_url }}">
+    <meta name="twitter:title" content="{{ config.title }}">
+    <meta name="twitter:description" content="{{ config.extra.social.description }}">
+
+    {% if config.extra.social.main_page_image %}
+    <meta property="og:image" content="{{ config.base_url }}/{{ config.extra.social.main_page_image }}">
+    <meta name="twitter:image" content="{{ config.base_url }}/{{ config.extra.social.main_page_image }}">
+    {% endif %}
+    {% endif %}
+    {% endblock title %}
+
     <link rel="stylesheet" href="{{ config.base_url }}/rahix.css" />
     <link rel="alternate" title="{{ config.title }}" type="application/atom+xml" href="{{ config.base_url }}" />
 
