@@ -1,0 +1,14 @@
+<div class="message is-info">
+  <div class="message-body">
+    <div>
+      <span style='font-size: 2rem;'>&#9888; </span>
+      <b>This section is still work in progress.</b>
+    </div>
+    {% if body %}
+    <div>
+      <h6>Notes:</h6>
+      <p>{{ body | markdown(inline=true) | safe }}</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
