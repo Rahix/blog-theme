@@ -1,6 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {%- for page in entries -%}
-      {%- if not page.permalink is containing("drafts")%}
+      {%- if not page.extra | get(key="noindex", default=false) %}
         <url>
             <loc>{{ page.permalink | safe }}</loc>
             {% if page.date -%}
