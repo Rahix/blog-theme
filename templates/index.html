@@ -26,6 +26,10 @@
     <meta name="twitter:title" content="{{ config.title }}">
     <meta name="twitter:description" content="{{ config.extra.social.description }}">
 
+    {% if config.extra.social.fedi_verification %}
+    <link rel="me" href="{{config.extra.social.fedi_verification}}" />
+    {% endif %}
+
     {% if config.extra.social.main_page_image %}
     <meta property="og:image" content="{{ config.base_url }}/{{ config.extra.social.main_page_image }}">
     <meta name="twitter:image" content="{{ config.base_url }}/{{ config.extra.social.main_page_image }}">
